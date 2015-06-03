@@ -8,7 +8,15 @@ public class Payment {
 	private String currency;
 	private String swift;
 	private double sum;
+	private double serviceFee;
 	
+	public double getServiceFee() {
+		this.serviceFee = new ServiceFee().apply(this);
+		return serviceFee;	
+	}
+	public void setServiceFee(double serviceFee) {
+		this.serviceFee = serviceFee;
+	}
 	public double getSum() {
 		return sum;
 	}
